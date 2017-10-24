@@ -1,5 +1,6 @@
-// Grab the articles as a json
+  // Grab the articles as a json
 $.getJSON("/articles", function(data) {
+  console.log("articles grabbed");
   // For each one
   for (var i = 0; i < data.length; i++) {
     // Display the apropos information on the page
@@ -7,9 +8,26 @@ $.getJSON("/articles", function(data) {
   }
 });
 
-
 //Surned the p tag into a button
 $("#scrape").on("click", function() {
+  console.log("scrape");
+
+
+//   request("http://www.nytimes.com", function(error, response, html) {
+//     // then, we load that into cheerio and save it to $ for shorthand
+//     var $ = cheerio.load(html);
+//     // now, we grab every h2 within an article tag and do the following:
+//     // $(".entry-title").each(function(i, element) {
+//     $("h2.archive-list--title").each(function(i, element) {
+      
+//       // save an empty result object
+//       var result = {};
+
+//       result.title = $(this).children("a").text();
+//       result.link = $(this).children("a").attr("href");
+// });
+
+
 // Whenever someone clicks a p tag
 // $(document).on("click", "p", function() {
   // Empty the notes from the note section
@@ -43,6 +61,7 @@ $("#scrape").on("click", function() {
       }
     });
 });
+
 
 // When you click the savenote button
 $(document).on("click", "#savenote", function() {

@@ -10,7 +10,7 @@ var request = require("request");
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
-// var axios = require("axios");
+var axios = require("axios");
 var cheerio = require("cheerio");
 
 // Require all models
@@ -23,9 +23,9 @@ var app = express();
 
 //Handlebars
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-// Now set handlebars engine
-app.set('view engine', 'handlebars');
+// app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+// // Now set handlebars engine
+// app.set('view engine', 'handlebars');
 
 // Configure middleware
 
@@ -61,8 +61,12 @@ dbm.once("open", function() {
 
 // A GET route for scraping the echojs website
 app.get("/scrape", function(req, res) {
+  console.log("server.js scrape");
   // First, we grab the body of the html with request
-  request("http://www.nytimes.com", function(error, response, html) {
+  // request("http://www.nytimes.com", function(error, response, html) {
+      axios.get("http://www.nytimes.com").then(function(response) {
+        console.log("axios.get")
+
   // The origional assignment code: ````````` qaxios.get("http://www.echojs.com/").then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(response.data);
