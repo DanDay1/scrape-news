@@ -1,0 +1,128 @@
+body {
+	background-color: #fff;
+	font-family: 'Karla', sans-serif;
+	text-align: center;
+}
+
+.jumbotron {
+	background: url('img/cake-bg.png') no-repeat center center; 
+	background-size: cover;
+	min-height: 750px !important;
+}
+
+h1 {
+	color: #B2484C !important;
+	font-size: 150px !important;
+	font-family: 'Unica One', cursive;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: 'Unica One', cursive;
+	text-transform: uppercase;
+	font-size: 60px;
+}
+
+h3 {
+	font-size: 25px;
+	line-height: 1.5;
+}
+
+#nav {
+	line-height: 50px;
+    height: 50px;
+    padding-top: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: 'Unica One', cursive;
+    text-transform: uppercase;
+}
+
+#heading {
+	margin-top: 125px;
+	margin-right: 20px;
+}
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #B2484C;
+}
+
+a {
+    color: #B2484C;
+}
+
+a.link {
+	color: #fff;
+	text-decoration: underline;
+}
+
+a.link:hover {
+	color: #fff;
+	text-decoration: overline;
+}
+
+#articles, #savedArticles {
+	background-color: #B2484C;
+	color: #fff;
+	margin-bottom: 30px;
+}
+
+/*.newArticle h3, btn {
+	display: inline;
+}*/
+
+.newArticle {
+	border: #fff .5px solid;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+/* modal styles */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #B2484C;
+}
+
+.modal-body {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-footer {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #B2484C !important;
+    border-color: #B2484C !important;
+    text-transform: uppercase;
+
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #B2484C !important;
+    border-color: #B2484C !important;
+}
