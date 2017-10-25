@@ -12,22 +12,6 @@ $.getJSON("/articles", function(data) {
 $("#scrape").on("click", function() {
   console.log("scrape");
 
-
-//   request("http://www.nytimes.com", function(error, response, html) {
-//     // then, we load that into cheerio and save it to $ for shorthand
-//     var $ = cheerio.load(html);
-//     // now, we grab every h2 within an article tag and do the following:
-//     // $(".entry-title").each(function(i, element) {
-//     $("h2.archive-list--title").each(function(i, element) {
-      
-//       // save an empty result object
-//       var result = {};
-
-//       result.title = $(this).children("a").text();
-//       result.link = $(this).children("a").attr("href");
-// });
-
-
 // Whenever someone clicks a p tag
 // $(document).on("click", "p", function() {
   // Empty the notes from the note section

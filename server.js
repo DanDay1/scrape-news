@@ -23,9 +23,9 @@ var app = express();
 
 //Handlebars
 
-// app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-// // Now set handlebars engine
-// app.set('view engine', 'handlebars');
+app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
+// Now set handlebars engine
+app.set('view engine', 'handlebars');
 
 // Configure middleware
 
@@ -65,7 +65,7 @@ app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
   // request("http://www.nytimes.com", function(error, response, html) {
       axios.get("http://www.nytimes.com").then(function(response) {
-        console.log("axios.get")
+        console.log("axios.get");
 
   // The origional assignment code: ````````` qaxios.get("http://www.echojs.com/").then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
@@ -83,6 +83,10 @@ app.get("/scrape", function(req, res) {
       result.link = $(this)
         .children("a")
         .attr("href");
+
+      result.link = $(this)
+        .children("div.text")
+        .text();
 
       // Create a new Article using the `result` object built from scraping
       db.Article
